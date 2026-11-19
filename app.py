@@ -20,7 +20,7 @@ from flask import Flask, g, jsonify, render_template, request
 from flask_cors import CORS
 from werkzeug.security import check_password_hash, generate_password_hash
 
-BASE_DIR = os.path.dirname(os.path.abspath(_file_))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.environ.get("CAMPUS_CONNECT_DB", os.path.join(BASE_DIR, "database.db"))
 
 app = Flask(_name_)
