@@ -1,5 +1,6 @@
-# Campus Connect - Integrated Student Enrollment and Information System
-# Backend: Python + Flask + SQLite REST API
+"""
+Campus Connect - Integrated Student Enrollment and Information System
+Backend: Python + Flask + SQLite REST API
 Combines:
   * Laboratory 3 - Student Course Management API (courses endpoints)
   * Laboratory 4 - Campus Connect Student Information Portal (students,
@@ -18,10 +19,10 @@ from flask import Flask, g, jsonify, render_template, request
 from flask_cors import CORS
 from werkzeug.security import check_password_hash, generate_password_hash
 
-BASE_DIR = os.path.dirname(os.path.abspath(_file_))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.environ.get("CAMPUS_CONNECT_DB", os.path.join(BASE_DIR, "database.db"))
 
-app = Flask(_name_)
+app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "campus-connect-development-key")
 
 # The Base44 frontend runs on a different origin, so the API must allow CORS.
