@@ -1,7 +1,5 @@
- """Campus Connect - Integrated Student Enrollment and Information System
-Backend: Python + Flask + SQLite REST API
-"""
-
+# Campus Connect - Integrated Student Enrollment and Information System
+# Backend: Python + Flask + SQLite REST API
 Combines:
   * Laboratory 3 - Student Course Management API (courses endpoints)
   * Laboratory 4 - Campus Connect Student Information Portal (students,
