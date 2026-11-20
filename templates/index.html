@@ -4,44 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Campus Connect</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
   <aside class="sidebar">
-    <div class="brand">
-      <h1>Campus Connect</h1>
-      <p>Integrated Student Enrollment &amp; Information System</p>
-    </div>
+    <div class="logo"><div class="mark">CC</div><div><strong>Campus Connect</strong><small>Student Information System</small></div></div>
     <nav>
-      <span class="nav-label">MANAGE</span>
-      <a href="#dashboard" data-page="dashboard"><i>▦</i>Dashboard</a>
-      <a href="#students" data-page="students"><i>👥</i>Students</a>
-      <a href="#courses" data-page="courses"><i>📖</i>Courses</a>
-      <a href="#enrollments" data-page="enrollments"><i>📋</i>Enrollments</a>
-      <a href="#announcements" data-page="announcements"><i>📢</i>Announcements</a>
-      <a href="#profile" data-page="profile"><i>◉</i>My Profile</a>
-      <span class="nav-label">SYSTEM</span>
-      <a href="#settings" data-page="settings"><i>⚙</i>API Settings</a>
-      <a href="#backend" data-page="backend"><i>🖥</i>Backend &amp; Deployment</a>
+      <a href="#dashboard" data-page="dashboard">Dashboard</a>
+      <a href="#students" data-page="students">Students</a>
+      <a href="#courses" data-page="courses">Courses</a>
+      <a href="#enrollment" data-page="enrollment">Enrollment</a>
+      <a href="#announcements" data-page="announcements">Announcements</a>
     </nav>
-    <div class="side-user">
-      <div class="avatar">AD</div>
-      <div><strong id="sideName">Aldrin Dañocup</strong><small>danocupaldrin@example.com</small></div>
-      <span class="logout" title="Log out">⎋</span>
-    </div>
   </aside>
-
-  <div class="main">
-    <header class="topbar">
-      <div class="search"><span>🔍</span><input id="search" placeholder="Search students by name, ID, or email"></div>
-      <span class="status offline" id="status"><b></b><span>API offline</span></span>
-      <div class="user-chip"><div class="avatar">AD</div><span id="topName">Aldrin Dañocup</span></div>
-    </header>
-    <main id="view"></main>
-  </div>
-
+  <main id="view"></main>
   <div class="modal-bg" id="modal"><div class="modal" id="modalBox"></div></div>
+  <div class="toast" id="toast"></div>
   <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
 </body>
 </html>
